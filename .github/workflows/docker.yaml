@@ -1,6 +1,5 @@
 on:
-    - push
-    
+  push
   jobs: 
     docker_build: 
       runs-on: ubuntu-latest
