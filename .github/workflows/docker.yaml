@@ -11,13 +11,13 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Docker Build 
-      run: docker build -t docker/issanovich/web-app:latest .
+      run: docker build -t docker.io/issanovich/web-app:latest .
 
     - name: Docker Login
       run: docker login --username=issanovich --password=***Kissiedu24
 
     - name: Docker Publish 
-      run: docker push docker/issanovich/web-app:latest
+      run: docker push docker.io/issanovich/web-app:latest
 
   docker_deploy:
     needs: docker_build
@@ -28,4 +28,4 @@ jobs:
       - name: Docker Login
         run: docker login --username=issanovich --password=***Kissiedu@24
       - name: Docker Run
-        run: docker run -d -p 8080:80 docker/issanovich/web-app:latest
+        run: docker run -d -p 8080:80 docker.io/issanovich/web-app:latest
