@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Docker Build 
-      run: docker build -t docker/issanovich/web-app:latest .
+      run: docker build -t web-app:latest .
 
     - name: Docker Login
       run: docker login --username=issanovich --password=***Kissiedu24
