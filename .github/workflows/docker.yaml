@@ -28,4 +28,4 @@ jobs:
       - name: Docker Login
         run: docker login --username=issanovich --password=***Kissiedu24
       - name: Docker Run
-        run: docker run -d -p 8080:80 docker/issanovich/web-app:latest
+        run: docker run -d -p 8080:80 docker/issanovich/web-app:latest .
